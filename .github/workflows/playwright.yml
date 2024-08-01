@@ -1,6 +1,6 @@
 name: Playwright Tests
 on:
-  push:
+  pull_request:
     branches: [ main, master ]
   schedule:
     - cron: '0 0 * * *'
@@ -44,3 +44,12 @@ jobs:
         name: tradingeconomics
         path: tradingeconomics.html
         retention-days: 30
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'hontrang'
+        git config --global user.email 'trang11392@gmail.com'
+        git add tradingeconomics.html
+        git commit -m "Add new file"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
