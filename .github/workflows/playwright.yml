@@ -2,8 +2,8 @@ name: Playwright Tests
 on:
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+  schedule:
+    - cron: '0 0 * * *'
 jobs:
   test:
     timeout-minutes: 60
@@ -25,16 +25,3 @@ jobs:
         name: tradingeconomics
         path: tradingeconomics.html
         retention-days: 30
-    - name: Get the latest artifact URL
-      id: get-artifact-url
-      run: echo "::set-output name=url::$(echo ${{ steps.upload-artifact.outputs.artifact-url }})"
-
-    - name: Create Redirect Page
-      run: |
-        echo "<html><head><meta http-equiv=\"refresh\" content=\"0; url=${{ steps.get-artifact-url.outputs.url }}\"></head><body></body></html>" > index.html
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
