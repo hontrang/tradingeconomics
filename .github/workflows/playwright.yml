@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+          ref: ${{ github.event.pull_request.head.ref }}
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
@@ -46,13 +48,11 @@ jobs:
         name: tradingeconomics
         path: tradingeconomics.html
         retention-days: 30
-    - name: Switch to artifacts branch
-      run: git checkout artifacts
     - name: Commit and push changes
       run: |
         git config --global user.name 'hontrang'
         git config --global user.email 'trang11392@gmail.com'
-        git add tradingeconomics.html
+        git add .
         git commit -m "Add new file"
         git push
       env:
