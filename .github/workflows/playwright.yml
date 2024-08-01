@@ -44,6 +44,8 @@ jobs:
         name: tradingeconomics
         path: tradingeconomics.html
         retention-days: 30
+    - name: Switch to artifacts branch
+      run: git checkout artifacts
     - name: Commit and push changes
       run: |
         git config --global user.name 'hontrang'
