@@ -22,6 +22,8 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+    - name: Check if file exists
+      run: ls -la /home/runner/work/tradingeconomics/tradingeconomics/
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
