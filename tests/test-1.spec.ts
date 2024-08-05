@@ -10,6 +10,7 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: '   Category' }).click();
   await page.getByText('Save').click();
   await page.locator('#DropDownListTimezone').selectOption('420');
+  await page.waitForLoadState('load');
   const content = await page.content();
   writeFile('./docs/index.html', content, (err) => {
     if (err) {
