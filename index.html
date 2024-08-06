@@ -15,7 +15,7 @@
     <script>IsDarkMode=false;</script>
     <form method="post" action="/calendar" id="aspnetForm">
 <div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="2NZeSdE4ZDvASde2EgCesvdnhG7pOSv8pxrQUohFL+KVLceFO0VWiJfty3FML2mfV3TCqM4eywNn2IVZyeae1ozb5/M=">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ka46Wi0jwuAjNR856+1jjkqqDNyQK6PQdc98F+RBHtdt9KRjX2JujOrLxQRy5aR7OlXcoVlrWF/nrZve4C0dPdpMvro=">
 </div>
 
 
@@ -34,7 +34,7 @@ var isPostBack = false;//]]>
         <div class="navbar-header navbar-header-search" id="searchMobileHeader">
             <div class="d-flex justify-content-between">
                 <a class="navbar-brand" style="width: 100%">
-                    <input type="text" placeholder="Search" id="thisIstheTinySearchBoxIdTag" autocomplete="off" class="nav-search-input-class navbar-search-2 ieconomics-324367-logic">
+                    <input type="text" placeholder="Search" id="thisIstheTinySearchBoxIdTag" autocomplete="off" class="nav-search-input-class navbar-search-2 ieconomics-274382-logic">
                 </a>
                 <ul id="thisIstheTinySearchResultsIdTag" class="dropdown-menu navbar-search-1">
                     <li>
@@ -88,7 +88,7 @@ var isPostBack = false;//]]>
                         <div class="search-li d-none d-lg-block">
                             <a noref="" id="thisIsTheSearchPlaceholderId" class="nav-searchbox-class stickydropdown d-block" title="Search">
                                 <div id="thisIsTheSearchBoxWrapperId" class="typeahead-searchbox-glyphicon-wrapper d-flex ">
-                                    <input type="text" placeholder="Search" aria-label="Search" id="thisIstheSearchBoxIdTag" autocomplete="off" class="d-none d-md-block nav-search-input-class ieconomics-306925-logic">
+                                    <input type="text" placeholder="Search" aria-label="Search" id="thisIstheSearchBoxIdTag" autocomplete="off" class="d-none d-md-block nav-search-input-class ieconomics-251216-logic">
                                 </div>
                             </a>
 
@@ -1004,9 +1004,9 @@ var isPostBack = false;//]]>
     <br>
     <div class="input-group">
         <span class="input-group-text d-none d-md-inline">From</span>
-        <input type="text" id="startDate" class="form-select" value="2024-08-05 16:56">
+        <input type="text" id="startDate" class="form-select" value="2024-08-05 18:59">
         <span class="input-group-text d-none d-md-inline">Until</span>
-        <input type="text" id="endDate" class="form-select" value="2024-08-20 00:56">
+        <input type="text" id="endDate" class="form-select" value="2024-08-20 02:59">
         <span class="input-group-btn">
             <button class="btn btn-success" onclick="setCustomDates(event);">Submit</button>
         </span>
@@ -13860,11 +13860,11 @@ Providing several request methods to query our databases, it is the best way to 
         else if (TE_URL.indexOf("/forecast/commodity") > -1) TEChannels = ['commodities', 'calendar'];
         else if (TE_URL.indexOf("/currency") > -1 || TE_URL.indexOf("/stock-market") > -1 || TE_URL.indexOf("/commodity/") > -1 || TE_URL.indexOf("/government-bond-yield") > -1) TEChannels = ['market', 'calendar'];
         else if (TE_URL.split(':').length == 2) TEChannels = ['calendar', 'market'];
-        console.log('IO EPOCH: 1722905800'); console.log('IO IP: 172.183.39.66'); console.log('IO URL: /calendar');console.log('IO TOKEN: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlcG9jaCI6MTcyMjkwNTgwMCwiaXAiOiIxNzIuMTgzLjM5LjY2IiwidXJsIjoiL2NhbGVuZGFyIn0.vf6Di1e04bqduOwUY1h4UpK1VLnQxRD5_h_zZBkcAp4');
+        console.log('IO EPOCH: 1722913183'); console.log('IO IP: 52.234.33.113'); console.log('IO URL: /calendar');console.log('IO TOKEN: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlcG9jaCI6MTcyMjkxMzE4MywiaXAiOiI1Mi4yMzQuMzMuMTEzIiwidXJsIjoiL2NhbGVuZGFyIn0.JFce2QPNiXNT_9neJ66-2MKi3I8XT0_CarXCX03aeec');
         socket = io.connect(socket_url, {
             withCredentials: true, // Needed for ELB Cookies Stickyness
             
-            auth: { token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlcG9jaCI6MTcyMjkwNTgwMCwiaXAiOiIxNzIuMTgzLjM5LjY2IiwidXJsIjoiL2NhbGVuZGFyIn0.vf6Di1e04bqduOwUY1h4UpK1VLnQxRD5_h_zZBkcAp4', url: TE_URL }
+            auth: { token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlcG9jaCI6MTcyMjkxMzE4MywiaXAiOiI1Mi4yMzQuMzMuMTEzIiwidXJsIjoiL2NhbGVuZGFyIn0.JFce2QPNiXNT_9neJ66-2MKi3I8XT0_CarXCX03aeec', url: TE_URL }
         });
         socket.on('connect', function () {
 
